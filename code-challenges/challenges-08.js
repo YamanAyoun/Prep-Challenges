@@ -28,7 +28,7 @@
 
 const customerAndAge = (obj) => {
   // write your code here
-  const CustomerArr = [];
+const CustomerArr = [];
 
   for (const name in obj) {
     const age = obj[name];
@@ -37,13 +37,12 @@ const customerAndAge = (obj) => {
   }
 
   return CustomerArr;
-  
 };
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02
-// optional:
+// Required:
 //
 // Write a function that takes recipe info object and returns an array of recipe info as strings
 // as in the example
