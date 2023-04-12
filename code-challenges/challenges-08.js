@@ -28,20 +28,21 @@
 
 const customerAndAge = (obj) => {
   // write your code here
-  let arrString = [];
-  
-    let name = obj;
-    let age = obj;
-    const customerInfo = `Customer Name :${name} , Age :${age}`;
-    arrString.push(customerInfo);
-  return arrString;
-  
+  const CustomerArr = [];
+
+  for (const name in obj) {
+    const age = obj[name];
+    const str = `Customer Name :${name} , Age :${age}`;
+    CustomerArr.push(str);
+  }
+
+  return CustomerArr;
 };
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02
-// optional:
+// Required:
 //
 // Write a function that takes recipe info object and returns an array of recipe info as strings
 // as in the example
@@ -62,6 +63,18 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   // write your code here
+  const pizzaArr = [];
+
+  for (const [key, value] of Object.entries(obj)) {
+    if (Array.isArray(value)) {
+      const joinedValue = value.join(',');
+      pizzaArr.push(`${key}: ${joinedValue}`);
+    } else {
+      pizzaArr.push(`${key}: ${value}`);
+    }
+  }
+
+  return pizzaArr;
 };
 // -------------------------------------------------------------------------------------------------------
 
