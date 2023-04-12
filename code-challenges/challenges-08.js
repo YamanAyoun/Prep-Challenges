@@ -28,15 +28,6 @@
 
 const customerAndAge = (obj) => {
   // write your code here
-  const CustomerArr = [];
-
-  for (const name in obj) {
-    const age = obj[name];
-    const str = `Customer Name :${name} , Age :${age}`;
-    CustomerArr.push(str);
-  }
-
-  return CustomerArr;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -63,18 +54,6 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   // write your code here
-  const pizzaArr = [];
-
-  for (const [key, value] of Object.entries(obj)) {
-    if (Array.isArray(value)) {
-      const joinedValue = value.join(',');
-      pizzaArr.push(`${key}: ${joinedValue}`);
-    } else {
-      pizzaArr.push(`${key}: ${value}`);
-    }
-  }
-
-  return pizzaArr;
 };
 // -------------------------------------------------------------------------------------------------------
 
